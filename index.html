@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Weather Dashboard</h1>
+            <p class="subtitle">Get real-time weather information for any city</p>
+        </header>
+
+        <div class="search-container">
+            <form id="weather-form">
+                <input 
+                    type="text" 
+                    id="city-input" 
+                    placeholder="Enter city name..." 
+                    required
+                    autocomplete="off"
+                >
+                <button type="submit" id="search-btn">
+                    <span class="btn-text">Search</span>
+                    <span class="btn-loader" id="btn-loader">⏳</span>
+                </button>
+            </form>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loader-container" id="loader">
+            <div class="spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="error-message"></div>
+
+        <!-- Weather Card -->
+        <div class="weather-card" id="weather-card">
+            <div class="card-header">
+                <h2 id="city-name">--</h2>
+                <p id="current-date-time">--</p>
+            </div>
+
+            <div class="weather-main">
+                <div class="weather-icon-container">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                </div>
+                <div class="temperature">
+                    <span id="temperature">--</span>
+                    <span class="unit">°C</span>
+                </div>
+                <p class="weather-condition" id="weather-condition">--</p>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-item">
+                    <span class="detail-label">💧 Humidity</span>
+                    <span class="detail-value" id="humidity">--</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">💨 Wind Speed</span>
+                    <span class="detail-value" id="wind-speed">--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
